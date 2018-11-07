@@ -22,7 +22,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }))
-app.listen(3011,function(req,res){
+app.listen(3014,function(req,res){
   console.log("Server has started...")
 })
 //------------------------------------------------------------
@@ -172,6 +172,7 @@ app.post('/login',function(req,res){
       res.redirect('/register')
     }
   }).catch(function(error){
+    res.redirect('/register')
     console.log(error)
   })
 
